@@ -1,0 +1,23 @@
+{
+  "name": "freecodecamp_timestampmicroservice",
+  "version": "1.0.0",
+  "description": "A microservice to convert timestamps to dates and vice versa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrOpossum/FreeCodeCamp_TimestampMicroservice.git"
+  },
+  "author": "Felix Gerberding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrOpossum/FreeCodeCamp_TimestampMicroservice/issues"
+  },
+  "homepage": "https://github.com/DrOpossum/FreeCodeCamp_TimestampMicroservice#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
