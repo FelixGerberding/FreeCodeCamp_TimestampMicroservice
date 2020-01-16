@@ -19,7 +19,12 @@ app.get("/api/timestamp/:date_string?", function(req, res) {
   if (req.params.date_string == null) {
     var d = new Date();
   } else {
-    var d = new Date(req.params.date_string);
+    var d = new Date(
+      !isNaN(parseInt(req.params.date_string)) &&
+      isFinite(req.params.date_string)
+        ? parseInt(req.params.date_string)
+        : req.params.date_string
+    );
   }
 
   if (d.isValid()) {
