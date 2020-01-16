@@ -15,8 +15,12 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get("/api/timestamp/:date_string", function(req, res) {
-  var d = new Date(req.params.date_string);
+app.get("/api/timestamp/:date_string?", function(req, res) {
+  if (req.params.date_string == null) {
+    var d = new Date();
+  } else {
+    var d = new Date(req.params.date_string);
+  }
 
   if (d.isValid()) {
     res.json({ unix: d.getTime(), utc: d.toUTCString() });
@@ -26,4 +30,4 @@ app.get("/api/timestamp/:date_string", function(req, res) {
 });
 
 // Starting the server obviously
-app.listen(process.env.PORT);
+app.listen(3000);
