@@ -30,4 +30,4 @@ app.get("/api/timestamp/:date_string?", function(req, res) {
 });
 
 // Starting the server obviously
-app.listen(3000);
+app.listen(process.env.PORT);
